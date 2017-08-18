@@ -1,0 +1,67 @@
+<odoo>
+  <data>
+      <record model="ir.ui.view" id="tree_view">
+          <field name="name">mymodule.tree</field>
+          <field name="model">mymodule.mymodule</field>
+          <field name="arch" type="xml">
+              <tree string="Tree view">
+                  <field name="name"></field>
+                  <field name="age"></field>
+                  <field name="classroom"></field>
+              </tree>
+          </field>
+      </record>
+
+      <record model="ir.ui.view" id="form_view">
+          <field name="name">mymodule.form</field>
+          <field name="model">mymodule.mymodule</field>
+          <field name="arch" type="xml">
+                <form string="Form View">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="age"/>
+                            <field name="classroom"/>
+                        </group>
+                        <notebook>
+                            <page string="tab1">
+                            </page>
+                            <page string="tab2">
+                            </page>
+                            <!--<page string="newclass">-->
+                                <!--<field name="mymodule_ids">-->
+                                    <!--<tree string="mymodule">-->
+                                        <!--<field name="name"/>-->
+                                        <!--<field name="age"/>-->
+                                        <!--<field name="classroom"/>-->
+                                    <!--</tree>-->
+                                <!--</field>-->
+                            <!--</page>-->
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+      </record>
+
+      <record model="ir.actions.act_window" id="tree_list_action">
+          <field name="name">My Module</field>
+          <field name="res_model">mymodule.mymodule</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,form</field>
+      </record>
+
+      <record model="ir.actions.act_window" id="form_list_action">
+          <field name="name">My Module</field>
+          <field name="res_model">mymodule.mymodule</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">form</field>
+      </record>
+
+      <menuitem id="main_mymodule_menu" name="My Module"/>
+
+      <menuitem id="tree_view_menu" name="Tree view" parent="main_mymodule_menu"
+                  action="tree_list_action"/>
+      <menuitem id="form_view_menu" name="Form view" parent="main_mymodule_menu"
+                  action="form_list_action"/>
+  </data>
+</odoo>
