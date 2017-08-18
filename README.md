@@ -3,7 +3,7 @@
 #### 1. Create a module
 #### 2. Show your module in the Apps zone and install with top menu
 #### 3. Create a left menu named Tree view, after enter it, show tree view with 3 fields: name, age, classroom
-run odoo fresh on port 7000
+#### run odoo fresh on port 7000
 
 #### 1. Create a left menu named Form view, and create a tab zone with 2 tabs
 #### 2. Define form zone with center align
