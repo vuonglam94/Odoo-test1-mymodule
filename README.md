@@ -1,5 +1,5 @@
 # Odoo-test1-mymodule
-##test Odoo 1st 
+## Test Odoo 1st 
 #### 1. Create a module
 #### 2. Show your module in the Apps zone and install with top menu
 #### 3. Create a left menu named Tree view, after enter it, show tree view with 3 fields: name, age, classroom
